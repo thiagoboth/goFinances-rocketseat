@@ -22,6 +22,10 @@ export const UserWrapper = styled.View`
     width: 100%;
 
     padding: 0px 24px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 `
 
 export const UserInfo = styled.View`
@@ -58,3 +62,10 @@ export const Icon = styled(Feather)`
     color: ${({ theme }) => theme.colors.secondary};
     font-size: ${RFValue(24)}px;
 `;
+
+//.attrs serve para colocar as propriedades com styled-components;
+export const HighlightCards = styled.ScrollView.attrs({
+    horizontal: true,
+    showsHorizontalScrollIndicator: false,
+    contentContainerStyle: { paddingHorizontal: 24 },
+})``;
